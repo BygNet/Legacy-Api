@@ -1,0 +1,18 @@
+type: http_request
+model: http_request
+id: rq_oWK2awmPrf
+createdAt: 2025-11-25T15:46:58.423283
+updatedAt: 2025-11-25T15:47:19.900549
+workspaceId: wk_mf29s8yBEi
+folderId: null
+authentication: {}
+authenticationType: null
+body: {}
+bodyType: null
+description: ''
+headers: []
+method: GET
+name: latest-posts
+sortPriority: -1764085539199.0
+url: ${[ baseUrl ]}/latest-posts
+urlParameters: []

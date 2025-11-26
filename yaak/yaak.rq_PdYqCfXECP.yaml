@@ -1,0 +1,43 @@
+type: http_request
+model: http_request
+id: rq_PdYqCfXECP
+createdAt: 2025-11-25T15:45:39.199627
+updatedAt: 2025-11-25T16:16:35.213888
+workspaceId: wk_mf29s8yBEi
+folderId: null
+authentication: {}
+authenticationType: null
+body:
+  form:
+  - enabled: true
+    id: e9Kj5CYuf9
+    name: title
+    value: Test Post 2
+  - enabled: true
+    id: Bv6Aw2nIH2
+    name: content
+    value: Test Post Content 2
+  - enabled: true
+    id: 0FTzRiEzF7
+    name: author
+    value: asboy2035
+  - enabled: true
+    id: XFSRTsUC6C
+    name: createdDate
+    value: 1-2-2025
+  - enabled: true
+    id: dQpsG57fNy
+    name: ''
+    value: ''
+bodyType: multipart/form-data
+description: ''
+headers:
+- enabled: true
+  name: Content-Type
+  value: multipart/form-data
+  id: XiIg8Xi45T
+method: POST
+name: create-post
+sortPriority: -1764085539199.0
+url: ${[ baseUrl ]}/create-post
+urlParameters: []

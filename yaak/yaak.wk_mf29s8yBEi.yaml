@@ -1,0 +1,14 @@
+type: workspace
+model: workspace
+id: wk_mf29s8yBEi
+createdAt: 2025-11-25T15:45:04.916044
+updatedAt: 2025-11-25T15:45:04.916045
+authentication: {}
+authenticationType: null
+description: ''
+headers: []
+name: BIG API
+encryptionKeyChallenge: null
+settingValidateCertificates: true
+settingFollowRedirects: true
+settingRequestTimeout: 0
