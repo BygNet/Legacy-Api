@@ -77,6 +77,13 @@ button > svg {
   height: 1rem;
 }
 
+button.plain {
+  padding: 0;
+}
+button.plain::after {
+  background: transparent;
+}
+
 #createButton {
   position: fixed;
   right: 1rem;
