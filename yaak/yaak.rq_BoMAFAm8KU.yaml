@@ -2,7 +2,7 @@ type: http_request
 model: http_request
 id: rq_BoMAFAm8KU
 createdAt: 2025-11-25T17:24:44.604647
-updatedAt: 2025-11-25T17:33:18.630638
+updatedAt: 2025-11-26T15:07:28.043013
 workspaceId: wk_mf29s8yBEi
 folderId: null
 authentication: {}
@@ -12,19 +12,19 @@ body:
   - enabled: true
     id: Jk5SXEHWaZ
     name: title
-    value: Bread
+    value: Still no charger
   - enabled: true
     id: 2UdIAXcuEI
     name: imageUrl
-    value: https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/584812606_18118438036557125_4339828656277817765_n.heic?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=Mzc3MTk2NTY5NDYwNzgyNzYxNA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0Mzl4MTM4MS5zZHIuQzMifQ%3D%3D&_nc_ohc=uKwFfCoZI4oQ7kNvwHwUHKR&_nc_oc=Admrbbg9a2biIiw-QuOqFn91dgwtSeZJZEArOHKJaUpL4Bcdm8ol7gvkV8nG0A6o5sI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=864HfoFMFzxTBK-YPKybgA&oh=00_Afhw2teXNGdy6Uv_Xi0gtPHEhm15y0mJuYCN8db93nT7Iw&oe=692BA0B7
+    value: https://scontent-ams2-1.cdninstagram.com/v/t51.82787-15/584369710_18544370464036240_7020024091177124792_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=1&ig_cache_key=Mzc3MTY4NDYyNzkyMTM5NjA1Mw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTkyMC5zZHIuQzMifQ%3D%3D&_nc_ohc=TEaQ_Fgw9gUQ7kNvwE_7u6Z&_nc_oc=AdmY-suxjHOeypkpuHJFXeVdFF-uCxxXCEUtzP1s-lr-LoyfrhszZZZ37TcwEGqhbEE&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_gid=aodEJyXOVg9x_8Aaxhan9g&oh=00_Afgimppl2ITAbGubGKdke4xbtp2EyrQr7K9XaWOUwDGnjA&oe=692CED4E
   - enabled: true
     id: JrFyTygxs5
     name: author
-    value: miku
+    value: dailyhumor_4u
   - enabled: true
     id: DgZa4E96Pp
     name: createdDate
-    value: 25-11-2025
+    value: 26-11-2025
   - enabled: true
     id: 6q6sbB3i8C
     name: ''
