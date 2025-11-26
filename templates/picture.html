@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block title %}Picture{% endblock %}
+
+{% block body %}
+  <h1>BIG Picture</h1>
+  <p class="light">For Web</p>
+
+  <div class="imageGrid">
+    {% for image in images %}
+      <div class="image">
+        <div class="infoOverlay">
+          <h2>{{ image.title }}</h2>
+          <p>{{ image.content }}</p>
+          <p class="light imageInfo">{{ image.author }} on {{ image.createdDate }}</p>
+        </div>
+        <img src="{{ image.imageUrl }}" data-url="{{ image.imageUrl }}" alt="{{ image.title }}">
+      </div>
+    {% endfor %}
+  </div>
+
+  <style>
+    #pictureTab {
+      background: var(--accentColor);
+    }
+  </style>
+
+  <script>
+    // Preview Images
+    let images = document.querySelectorAll('.image > img')
+    images.forEach(image => {
+      image.addEventListener('click', e => {
+        let data = image.dataset
+        let previewModal = document.createElement('div')
+        previewModal.classList.add('modal')
+
+        previewModal.innerHTML = `
+          <div class="previewModal">
+            <h1>Preview</h1>
+            <img src="${data.url}" alt="Preview">
+          </div>
+        `
+        document.body.appendChild(previewModal)
+        previewModal.addEventListener('click', e => {
+          document.querySelectorAll(".modal").forEach(modal => {
+            modal.remove()
+          })
+        })
+      })
+    })
+  </script>
+{% endblock %}

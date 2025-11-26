@@ -1,0 +1,221 @@
+@import "fonts.css";
+@import "colors.css";
+@import "utils.css";
+
+body {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--backgroundColor);
+  color: var(--textColor);
+  width: calc(100vw - 1.5rem*2);
+}
+
+a {
+  text-decoration: none;
+}
+
+.tabBar {
+  display: flex;
+  padding: 0.5rem;
+  background: var(--foregroundColor);
+  gap: 0.25rem;
+  width: fit-content;
+  border-radius: 2rem;
+}
+.tabBar > a {
+  border-radius: 2rem;
+  background: var(--foregroundColor);
+  padding: 0.5rem 0.75rem;
+  color: var(--textColor);
+  font-size: large;
+}
+@media (max-width: 30rem) {
+  .tabBar {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+button {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  gap: 0.5rem;
+
+  border-radius: 0.75rem;
+  color: var(--textColor);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: medium;
+  padding: 0.5rem 0.75rem;
+}
+
+button:has(svg) {
+  padding: 0.5rem;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  background: var(--accentColor);
+  border-radius: 0.75rem;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+button > svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+#createButton {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 1rem;
+}
+#createButton::after {
+  border-radius: 50%;
+  opacity: 1;
+}
+#createButton > svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.postList {
+  max-width: 75rem;
+  margin-top: 1.5rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 1rem;
+}
+.post {
+  position: relative;
+  background: var(--foregroundColor);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  max-width: calc(100vw - 1.5rem*2 - 1rem*2);
+}
+.postInfo, .imageInfo {
+  font-size: small;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.image {
+  position: relative;
+}
+.image > img {
+  cursor: zoom-in;
+  width: 100%;
+  border-radius: 1rem;
+}
+.infoOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--foregroundThickColor);
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--foregroundThickColor);
+  backdrop-filter: blur(1rem);
+}
+.previewModal > img {
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100vh - 2rem - 4rem);
+}
+
+.shops {
+  margin-top: 1.5rem;
+}
+.shop {
+  display: flex;
+  position: relative;
+  background: var(--foregroundColor);
+  border-radius: 1rem;
+  gap: 1rem;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  color: var(--textColor);
+}
+.shopLogo {
+  position: relative;
+  height: 3rem;
+  width: 6rem;
+}
+.linkIndicator {
+  position: absolute;
+  right: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+
+  border-radius: 1.5rem;
+  background: var(--foregroundColor);
+}
+form > button {
+  margin-top: 1rem;
+}
+
+.formButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+input, select, textarea {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: var(--foregroundColor);
+  color: var(--textColor);
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  background: var(--foregroundColor);
+  border-radius: 2.5rem;
+  backdrop-filter: blur(3rem);
+}

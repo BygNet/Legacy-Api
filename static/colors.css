@@ -1,0 +1,17 @@
+:root {
+  --backgroundColor: white;
+  --textColor: #202020;
+  --accentColor: #15c1c1;
+  --foregroundColor: rgba(184, 184, 184, 0.25);
+  --foregroundThickColor: rgba(184, 184, 184, 0.7);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --backgroundColor: black;
+    --textColor: #dcdcdc;
+    --accentColor: #0c8080;
+    --foregroundColor: rgba(96, 96, 96, 0.25);
+    --foregroundThickColor: rgba(96, 96, 96, 0.7);
+  }
+}

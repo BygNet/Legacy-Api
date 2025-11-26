@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}Shop{% endblock %}
+
+{% block body %}
+  <h1>BIG Shop</h1>
+  <p class="light">For Web</p>
+
+  <div class="shops">
+    {% for shop in shops %}
+      <a href="{{ shop.openUrl }}" target="_blank">
+        <div class="shop" style="--tint: {{ shop.tint }}">
+          <img class="shopLogo" src="/static/shopLogos/{{ shop.imageName }}.svg" alt="{{ shop.title }} Logo">
+          <div class="shopInfo">
+            <h2>{{ shop.title }}</h2>
+            <p class="light">{{ shop.subtitle }}</p>
+          </div>
+
+          <svg class="linkIndicator" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path fill="currentColor" d="M5.47 17.47a.75.75 0 1 0 1.06 1.06zm1.06 1.06l12-12l-1.06-1.06l-12 12z" opacity="0.5"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 6h9v9"/></g></svg>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+
+  <style>
+    #shopTab {
+      background: var(--accentColor);
+    }
+  </style>
+{% endblock %}

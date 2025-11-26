@@ -1,6 +1,46 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template as render
 from cs50 import SQL
 from os import path
+from dataclasses import dataclass
+
+@dataclass
+class Shop:
+  title: str
+  subtitle: str
+  imageName: str
+  tint: str
+  openUrl: str
+
+shops: list[Shop] = [
+  Shop(
+    title="Temu",
+    subtitle="I love child labor.",
+    imageName="TemuLogo",
+    tint="orange",
+    openUrl="https://www.temu.com/"
+  ),
+  Shop(
+    title="Amazon",
+    subtitle="Fast shipping mommy.",
+    imageName="AmazonLogo",
+    tint="yellow",
+    openUrl="https://www.amazon.com/"
+  ),
+  Shop(
+    title="Shein",
+    subtitle="Microtrend overdose.",
+    imageName="SheinLogo",
+    tint="red",
+    openUrl="https://www.shein.com/"
+  ),
+  Shop(
+    title="Vinted",
+    subtitle="Second-hand slay.",
+    imageName="VintedLogo",
+    tint="green",
+    openUrl="https://www.vinted.com/"
+  )
+]
 
 app = Flask(__name__)
 
@@ -33,6 +73,14 @@ db.execute('''
   )
 ''')
 
+
+@app.route('/')
+def index():
+  posts = db.execute('''
+    select * from posts order by id desc limit 100
+  ''')
+
+  return render("social.html", posts=posts)
 
 @app.route('/latest-posts')
 def latestPosts():
@@ -74,6 +122,15 @@ def likePost():
   return 'success', 201
 
 
+@app.route('/picture')
+def picture():
+  images = db.execute('''
+    select * from images order by id desc limit 100
+  ''')
+
+  return render("picture.html", images=images)
+
+
 @app.route('/latest-images')
 def latestImages():
   images = db.execute('''
@@ -100,6 +157,27 @@ def uploadImage():
 
   return 'success', 201
 
+
+@app.route('/shop')
+def shop():
+  return render("shop.html", shops=shops)
+
+
+@app.route('/detail')
+def detail():
+  postId = request.args.get('postId')
+  if not postId:
+    return render("post.html", error="no ID"), 400
+
+  posts = db.execute('''
+    select * from posts where id = ?  
+  ''', postId)
+
+  if len(posts) == 0:
+    return render("post.html", error="post not found"), 404
+
+  postTitle = posts[0]['title']
+  return render("post.html", posts=posts, postTitle=postTitle)
 
 if __name__ == '__main__':
   app.run()
