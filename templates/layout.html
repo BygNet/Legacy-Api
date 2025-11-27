@@ -25,6 +25,9 @@
   <button id="createButton">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M22 10.5V12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2h1.5" opacity="0.5"/><path d="m17.3 2.806l-.648.65l-5.965 5.964c-.404.404-.606.606-.78.829q-.308.395-.524.848c-.121.255-.211.526-.392 1.068L8.412 13.9l-.374 1.123a.742.742 0 0 0 .94.939l1.122-.374l1.735-.579c.542-.18.813-.27 1.068-.392q.453-.217.848-.524c.223-.174.425-.376.83-.78l5.964-5.965l.649-.649A2.753 2.753 0 0 0 17.3 2.806Z"/><path d="M16.652 3.455s.081 1.379 1.298 2.595c1.216 1.217 2.595 1.298 2.595 1.298M10.1 15.588L8.413 13.9" opacity="0.5"/></g></svg>
   </button>
+  <button id="uploadImageButton">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2"/><path d="m2 12.5l1.752-1.533a2.3 2.3 0 0 1 3.14.105l4.29 4.29a2 2 0 0 0 2.564.222l.299-.21a3 3 0 0 1 3.731.225L21 18.5" opacity="0.5"/><path stroke-linejoin="round" d="M17 2v9m0-9l3 3m-3-3l-3 3"/></g></svg>
+  </button>
 
   <div class="modal hidden" id="createModal">
     <div class="createModalContent modalContent">
@@ -65,6 +68,45 @@
     </div>
   </div>
 
+    <div class="modal hidden" id="uploadImageModal">
+    <div class="uploadImageModalContent modalContent">
+      <h2>Upload Image</h2>
+
+      <form action="/upload-image" method="POST" id="uploadForm">
+        <label>
+          Title:
+          <input type="text" required name="title" placeholder="Title">
+        </label>
+
+        <label>
+            Image URL:
+            <input type="url" required name="imageUrl" placeholder="Image URL">
+        </label>
+
+        <label>
+          Your Name:
+          <input type="text" required name="author" placeholder="Username">
+        </label>
+
+        <label>
+          Date:
+          <input type="text" required name="createdDate" placeholder="Date">
+        </label>
+
+        <div class="formButtons">
+          <button type="reset" class="plain" id="cancelUploadButton">
+            Cancel
+          </button>
+
+          <button type="submit" id="postButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12s0-7.071 1.464-8.536C4.93 2 7.286 2 12 2"/><path d="m2 12.5l1.752-1.533a2.3 2.3 0 0 1 3.14.105l4.29 4.29a2 2 0 0 0 2.564.222l.299-.21a3 3 0 0 1 3.731.225L21 18.5" opacity="0.5"/><path stroke-linejoin="round" d="M17 2v9m0-9l3 3m-3-3l-3 3"/></g></svg>
+            Upload
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script>
     // Open Create Modal
     let createButton = document.querySelector('button#createButton')
@@ -83,6 +125,30 @@
       let formData = new FormData(e.target)
 
       fetch('/create-post', {
+        method: 'POST',
+        body: formData
+      }).then(() => {
+        window.location.reload()
+      })
+    })
+
+    // Open Upload Modal
+    let uploadButton = document.querySelector('button#uploadImageButton')
+    uploadButton.addEventListener('click', () => {
+      document.querySelector('#uploadImageModal').classList.remove('hidden')
+    })
+
+    // Close Upload Modal
+    document.querySelector('button#cancelUploadButton').addEventListener('click', () => {
+      document.querySelector('#uploadImageModal').classList.add('hidden')
+    })
+
+    document.querySelector('#uploadForm').addEventListener('submit', e => {
+      e.preventDefault()
+
+      let formData = new FormData(e.target)
+
+      fetch('/upload-image', {
         method: 'POST',
         body: formData
       }).then(() => {

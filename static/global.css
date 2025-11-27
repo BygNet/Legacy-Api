@@ -90,11 +90,17 @@ button.plain::after {
   bottom: 1rem;
   padding: 1rem;
 }
-#createButton::after {
+#uploadImageButton {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 1rem;
+}
+#createButton::after, #uploadImageButton::after {
   border-radius: 50%;
   opacity: 1;
 }
-#createButton > svg {
+#createButton > svg, #uploadImageButton > svg {
   width: 2rem;
   height: 2rem;
 }
