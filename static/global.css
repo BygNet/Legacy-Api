@@ -20,7 +20,7 @@ a {
   background: var(--foregroundColor);
   gap: 0.25rem;
   width: fit-content;
-  border-radius: 2rem;
+  border-radius: 1.75rem;
 }
 .tabBar > a {
   border-radius: 2rem;
@@ -29,10 +29,10 @@ a {
   color: var(--textColor);
   font-size: large;
 }
-@media (max-width: 30rem) {
+@media (max-width: 35rem) {
   .tabBar {
     flex-direction: column;
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 
@@ -231,4 +231,8 @@ input, select, textarea {
   background: var(--foregroundColor);
   border-radius: 2.5rem;
   backdrop-filter: blur(3rem);
+}
+
+.tiers {
+  margin-top: 1.5rem;
 }

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}Pro{% endblock %}
+
+{% block body %}
+    <h1>Upgrade</h1>
+    <p class="light">BIG Pro For Web</p>
+
+    <div class="tiers">
+        {% for tier in tiers %}
+            <div class="tier">
+                <h2>{{ tier.title }}</h2>
+                <p>{{ tier.subtitle }}</p>
+                <p class="light">{{ tier.price }}</p>
+                <div class="divider"></div>
+
+                {% for feature in tier.features %}
+                    <p>{{ feature }}</p>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+
+    <style>
+        #upgradeTab {
+            background: var(--accentColor);
+        }
+
+        .tier {
+            background: var(--foregroundColor);
+            margin-bottom: 0.75rem;
+            padding: 1rem;
+            border-radius: 1.5rem;
+        }
+    </style>
+{% endblock %}

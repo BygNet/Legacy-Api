@@ -4,3 +4,10 @@
 .hidden {
   display: none !important;
 }
+.divider {
+  height: 0.25rem;
+  border-radius: 1rem;
+  width: 100%;
+  margin: 1.5rem 0;
+  background: var(--foregroundColor);
+}

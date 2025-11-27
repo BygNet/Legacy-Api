@@ -42,6 +42,64 @@ shops: list[Shop] = [
   )
 ]
 
+@dataclass()
+class UpgradeTier:
+  title: str
+  subtitle: str
+  price: str
+  features: list[str]
+
+upgradeTiers: list[UpgradeTier] = [
+  UpgradeTier(
+    title="Premium",
+    subtitle="Improved BIG Experience.",
+    price="$9.99/mo",
+    features=[
+      "5% Less Ads",
+      "Better Subway Surfers Gameplay"
+    ]
+  ),
+
+  UpgradeTier(
+    title="Pro",
+    subtitle="Powerful BIG Experience.",
+    price="$19.99/mo",
+    features=[
+      "15% Less Ads",
+      "Built-in Shop",
+      "Excellent Subway Surfers Gameplay",
+      "Sigma Profile Widget"
+    ]
+  ),
+
+  UpgradeTier(
+    title="Ultra",
+    subtitle="Ultimate BIG Experience.",
+    price="$29.99/mo",
+    features=[
+      "20% Less Ads",
+      "Built-in Shop",
+      "Excellent Subway Surfers Gameplay",
+      "Sigma Profile Widget",
+      "Thank-you message"
+    ]
+  ),
+
+  UpgradeTier(
+    title="XTreme",
+    subtitle="Extreme BIG Experience.",
+    price="$69.99/mo",
+    features=[
+      "25% Less Ads",
+      "Built-in Shop",
+      "Excellent Subway Surfers Gameplay",
+      "Sigma Profile Widget",
+      "Thank-you message",
+      "Miku Miku++"
+    ]
+  )
+]
+
 app = Flask(__name__)
 
 # Create DB
@@ -178,6 +236,11 @@ def detail():
 
   postTitle = posts[0]['title']
   return render("post.html", posts=posts, postTitle=postTitle)
+
+
+@app.route('/upgrade')
+def upgrade():
+  return render("upgrade.html", tiers=upgradeTiers)
 
 if __name__ == '__main__':
   app.run()
