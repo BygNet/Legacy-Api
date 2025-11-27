@@ -7,6 +7,7 @@
 
   <div class="postList">
     {% for post in posts %}
+    <a href="https://big.a35.dev/detail?postId={{ post.id }}" class="postLink">
       <div class="post">
         <h2>{{ post.title }}</h2>
         <p>{{ post.content }}</p>
@@ -17,14 +18,19 @@
           <span>{{ post.likes }}</span>
         </button>
       </div>
+    </a>
     {% endfor %}
   </div>
 
-  <style>
-    #socialTab {
-      background: var(--accentColor);
-    }
-  </style>
+    <style>
+      #socialTab {
+        background: var(--accentColor);
+      }
 
-  <script src="/static/like.js" defer type="module"></script>
+      .postLink {
+        color: var(--textColor);
+      }
+    </style>
+
+    <script src="/static/like.js" defer type="module"></script>
 {% endblock %}
