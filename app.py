@@ -261,5 +261,19 @@ def latestVideos():
 
   return jsonify(videos), 200
 
+@app.route('/like-video', methods=['POST'])
+def likeVideo():
+  videoId = request.form.get('videoId')
+
+  if not videoId:
+    return 'error: missing data', 400
+
+  db.execute('''
+    update videos set likes = likes + 1 where id = ?
+  ''', videoId)
+
+  return 'success', 201
+
+
 if __name__ == '__main__':
   app.run()
