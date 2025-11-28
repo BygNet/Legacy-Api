@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a83b143f-820b-48e5-9582-8e92033db957" name="Changes" comment="add ads">
+    <list default="true" id="a83b143f-820b-48e5-9582-8e92033db957" name="Changes" comment="add gitignore to idea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/upgrade.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upgrade.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/ash/PycharmProjects/BigApi/static/ads",
     "list.type.of.created.stylesheet": "CSS",
@@ -123,7 +126,7 @@
       <workItem from="1764238454977" duration="3780000" />
       <workItem from="1764242696733" duration="8000" />
       <workItem from="1764242722429" duration="2106000" />
-      <workItem from="1764324795785" duration="6047000" />
+      <workItem from="1764324795785" duration="8269000" />
     </task>
     <task id="LOCAL-00001" summary="initial files">
       <option name="closed" value="true" />
@@ -213,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764349165968</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add gitignore to idea">
+      <option name="closed" value="true" />
+      <created>1764349689682</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1764349689682</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,9 +241,10 @@
     <MESSAGE value="make BIG posts link to their detail views" />
     <MESSAGE value="add liking videos" />
     <MESSAGE value="add ads" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ads" />
+    <MESSAGE value="add gitignore to idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gitignore to idea" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/BigApi$BigApi.coverage" NAME="BigApi Coverage Results" MODIFIED="1764349096489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BigApi$BigApi.coverage" NAME="BigApi Coverage Results" MODIFIED="1764352249998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
