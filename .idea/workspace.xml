@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a83b143f-820b-48e5-9582-8e92033db957" name="Changes" comment="add BIG Pro to web">
+    <list default="true" id="a83b143f-820b-48e5-9582-8e92033db957" name="Changes" comment="make BIG posts link to their detail views">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/72a2657f-0be5-4ea4-bce5-9106ec7d86b8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/72a2657f-0be5-4ea4-bce5-9106ec7d86b8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/social.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/social.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +123,8 @@
       <workItem from="1764238087294" duration="363000" />
       <workItem from="1764238454977" duration="3780000" />
       <workItem from="1764242696733" duration="8000" />
-      <workItem from="1764242722429" duration="645000" />
+      <workItem from="1764242722429" duration="2106000" />
+      <workItem from="1764324795785" duration="726000" />
     </task>
     <task id="LOCAL-00001" summary="initial files">
       <option name="closed" value="true" />
@@ -180,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764241709145</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="make BIG posts link to their detail views">
+      <option name="closed" value="true" />
+      <created>1764243400167</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1764243400167</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,9 +204,10 @@
     <MESSAGE value="allow upload images on web" />
     <MESSAGE value="update config" />
     <MESSAGE value="add BIG Pro to web" />
-    <option name="LAST_COMMIT_MESSAGE" value="add BIG Pro to web" />
+    <MESSAGE value="make BIG posts link to their detail views" />
+    <option name="LAST_COMMIT_MESSAGE" value="make BIG posts link to their detail views" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/BigApi$BigApi.coverage" NAME="BigApi Coverage Results" MODIFIED="1764242837668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BigApi$BigApi.coverage" NAME="BigApi Coverage Results" MODIFIED="1764325075395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

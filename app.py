@@ -130,6 +130,17 @@ db.execute('''
     shares integer not null default 0
   )
 ''')
+db.execute('''
+  create table if not exists videos (
+    id integer primary key autoincrement not null,
+    title text not null,
+    author text not null,
+    videoUrl text not null,
+    createdDate text not null,
+    likes integer not null default 0,
+    shares integer not null default 0
+  )
+''')
 
 
 @app.route('/')
@@ -241,6 +252,14 @@ def detail():
 @app.route('/upgrade')
 def upgrade():
   return render("upgrade.html", tiers=upgradeTiers)
+
+@app.route('/latest-videos')
+def latestVideos():
+  videos = db.execute('''
+    select * from videos order by id desc limit 100
+  ''')
+
+  return jsonify(videos), 200
 
 if __name__ == '__main__':
   app.run()

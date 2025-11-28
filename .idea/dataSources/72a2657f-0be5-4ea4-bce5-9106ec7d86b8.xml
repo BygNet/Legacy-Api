@@ -548,7 +548,7 @@
     </routine>
     <schema id="208" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2025-11-25.17:03:28</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-11-28.10:14:31</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="209" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1755,115 +1755,158 @@
     <table id="611" parent="208" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <column id="612" parent="608" name="id">
+    <table id="612" parent="208" name="videos"/>
+    <column id="613" parent="608" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>integer|0s</StoredType>
     </column>
-    <column id="613" parent="608" name="title">
+    <column id="614" parent="608" name="title">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="614" parent="608" name="imageUrl">
+    <column id="615" parent="608" name="imageUrl">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="615" parent="608" name="author">
+    <column id="616" parent="608" name="author">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="616" parent="608" name="createdDate">
+    <column id="617" parent="608" name="createdDate">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="617" parent="608" name="likes">
+    <column id="618" parent="608" name="likes">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>integer|0s</StoredType>
     </column>
-    <column id="618" parent="608" name="shares">
+    <column id="619" parent="608" name="shares">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>integer|0s</StoredType>
     </column>
-    <key id="619" parent="608">
+    <key id="620" parent="608">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="620" parent="609" name="id">
+    <column id="621" parent="609" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>integer|0s</StoredType>
     </column>
-    <column id="621" parent="609" name="title">
+    <column id="622" parent="609" name="title">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="622" parent="609" name="content">
+    <column id="623" parent="609" name="content">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="623" parent="609" name="author">
+    <column id="624" parent="609" name="author">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="624" parent="609" name="createdDate">
+    <column id="625" parent="609" name="createdDate">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="625" parent="609" name="likes">
+    <column id="626" parent="609" name="likes">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>integer|0s</StoredType>
     </column>
-    <column id="626" parent="609" name="shares">
+    <column id="627" parent="609" name="shares">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>integer|0s</StoredType>
     </column>
-    <key id="627" parent="609">
+    <key id="628" parent="609">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="628" parent="610" name="type">
+    <column id="629" parent="610" name="type">
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="629" parent="610" name="name">
+    <column id="630" parent="610" name="name">
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="630" parent="610" name="tbl_name">
+    <column id="631" parent="610" name="tbl_name">
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="631" parent="610" name="rootpage">
+    <column id="632" parent="610" name="rootpage">
       <Position>4</Position>
       <StoredType>INT|0s</StoredType>
     </column>
-    <column id="632" parent="610" name="sql">
+    <column id="633" parent="610" name="sql">
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="633" parent="611" name="name">
+    <column id="634" parent="611" name="name">
       <Position>1</Position>
     </column>
-    <column id="634" parent="611" name="seq">
+    <column id="635" parent="611" name="seq">
       <Position>2</Position>
     </column>
+    <column id="636" parent="612" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>integer|0s</StoredType>
+    </column>
+    <column id="637" parent="612" name="title">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="638" parent="612" name="author">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="639" parent="612" name="videoUrl">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="640" parent="612" name="createdDate">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="641" parent="612" name="likes">
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>integer|0s</StoredType>
+    </column>
+    <column id="642" parent="612" name="shares">
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>integer|0s</StoredType>
+    </column>
+    <key id="643" parent="612">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>
