@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a83b143f-820b-48e5-9582-8e92033db957" name="Changes" comment="add gitignore to idea">
+    <list default="true" id="a83b143f-820b-48e5-9582-8e92033db957" name="Changes" comment="use more variables, update mobile layout">
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/upgrade.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/upgrade.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +21,7 @@
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="Apache-2.0" />
       </list>
     </option>
   </component>
@@ -126,7 +127,7 @@
       <workItem from="1764238454977" duration="3780000" />
       <workItem from="1764242696733" duration="8000" />
       <workItem from="1764242722429" duration="2106000" />
-      <workItem from="1764324795785" duration="8269000" />
+      <workItem from="1764324795785" duration="9207000" />
     </task>
     <task id="LOCAL-00001" summary="initial files">
       <option name="closed" value="true" />
@@ -224,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764349689682</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="use more variables, update mobile layout">
+      <option name="closed" value="true" />
+      <created>1764353086223</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1764353086223</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,9 +251,10 @@
     <MESSAGE value="add liking videos" />
     <MESSAGE value="add ads" />
     <MESSAGE value="add gitignore to idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore to idea" />
+    <MESSAGE value="use more variables, update mobile layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="use more variables, update mobile layout" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/BigApi$BigApi.coverage" NAME="BigApi Coverage Results" MODIFIED="1764352249998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BigApi$BigApi.coverage" NAME="BigApi Coverage Results" MODIFIED="1764353042714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
