@@ -84,16 +84,25 @@ button.plain::after {
   background: transparent;
 }
 
-#createButton {
+.bottomBar {
   position: fixed;
-  right: 1rem;
   bottom: 1rem;
-  padding: 1rem;
-}
-#uploadImageButton {
-  position: fixed;
   left: 1rem;
-  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.bottomBar > #bannerAdBar {
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 1rem;
+  border-radius: 1.5rem;
+  max-width: 24rem;
+  cursor: pointer;
+}
+#createButton, #uploadImageButton {
   padding: 1rem;
 }
 #createButton::after, #uploadImageButton::after {
@@ -113,12 +122,15 @@ button.plain::after {
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   gap: 1rem;
 }
+.postLink {
+  width: 100%;
+  height: 100%;
+}
 .post {
   position: relative;
   background: var(--foregroundColor);
   border-radius: 1.5rem;
   padding: 1rem;
-  max-width: calc(100vw - 1.5rem*2 - 1rem*2);
 }
 .postInfo, .imageInfo {
   font-size: small;
