@@ -1,6 +1,6 @@
 # BIG API + BIG Web
 This repo contains the API and Web version of BIG - the beautiful, unhinged, open social media.
-Access it [here](https://big.a35.dev/).
+Access it [here](https://byg.gg/).
 
 ## Why BIG?
 - We love ash.
